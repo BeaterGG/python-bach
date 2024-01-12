@@ -48,8 +48,8 @@ menu = """
         2 - Imprimir claves
         3 - Consultar valor
         4 - Añadir <edad>
-        5- Borrar clave
-        0.- Salir """
+        5 - Borrar clave
+        0 - Salir """
 while True:
     print("\n","--- MAIN MENU ---")
     print(menu,"\n")
