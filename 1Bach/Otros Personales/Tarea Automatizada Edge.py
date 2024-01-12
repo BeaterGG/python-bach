@@ -10,9 +10,9 @@ pyautogui.write('Comenzando Tarea Automatizada')
 
 pyautogui.hotkey('enter')
 
-x = 1
-while (x <= 36):
-    if(x == 35):
+n = 1
+while (n <= 36):
+    if(n == 35):
     
         break
 
@@ -20,4 +20,4 @@ while (x <= 36):
     pyautogui.hotkey('ctrl','t')
     pyautogui.write(str(random.randint(0,99999999)))
     pyautogui.hotkey('enter')
-    x += 1
+    n += 1
