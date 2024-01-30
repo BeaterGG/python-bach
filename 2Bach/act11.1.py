@@ -15,8 +15,14 @@ class triangulo:
 t1 = triangulo(5,4)
 
 print("\n---- Datos del segundo triángulo ---")
-base=input("Introduce la longitud de la base: ")
-altura=input("Introduce la longitud de la altura: ")
+
+while True:
+    try:
+        base=float(input("Introduce la longitud de la base: "))
+        altura=float(input("Introduce la longitud de la altura: "))
+        break
+    except:
+        print("Eso no es un dato valido (número)")
 t2= triangulo(base,altura)
 
 print("\n-------- Propiedades del primer triángulo--------")
