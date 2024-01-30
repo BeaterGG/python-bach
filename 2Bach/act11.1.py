@@ -7,22 +7,19 @@ class triangulo:
         self.base = base
         self.altura = altura
     def props(self):
-            print("Numero de lados:", self.lados)
-            print("Tipo de polígono:", self.tipo)
-            print("Base:", self.base)
-            print("Altura:", self.altura)
-    
+        print("Numero de lados:", self.lados)
+        print("Tipo de polígono:", self.tipo)
+        print("Base:", self.base)
+        print("Altura:", self.altura)
 
 t1 = triangulo(5,4)
 
-print("---- Datos segundo triángulo ---")
-
+print("\n---- Datos del segundo triángulo ---")
 base=input("Introduce la longitud de la base: ")
 altura=input("Introduce la longitud de la altura: ")
-
 t2= triangulo(base,altura)
 
-print("-------- Propiedades del primer triángulo--------")
+print("\n-------- Propiedades del primer triángulo--------")
 t1.props()
-print("-------- Propiedades del segundo triángulo--------")
+print("\n-------- Propiedades del segundo triángulo--------")
 t2.props()
