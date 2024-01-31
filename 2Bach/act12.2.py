@@ -1,7 +1,7 @@
 class Triangulo:
     def __init__(self,lado1,lado2,lado3) -> None:
         lados=3
-        self.__lados = lados
+        self.__lados = lados #el dato de "lados" SI esta protegido
         self.lado1 = lado1
         self.lado2 = lado2
         self.lado3 = lado3

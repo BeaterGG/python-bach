@@ -2,7 +2,7 @@ class triangulo:
     def __init__(self,base,altura) -> None:
         tipo="Triángulo"
         lados=3
-        self.tipo = tipo
+        self.tipo = tipo #el dato de "lados" NO esta protegido
         self.lados = lados
         self.base = base
         self.altura = altura

@@ -3,17 +3,14 @@ class Usuario():
         """ método contructor con propiedades nombre y passord protegido"""
         
         self.name = name
-        self.__password = password
+        self.__password = password #la contraseña SI esta protegida
 
     def mostrarUsuario(self):
         """ solicita la contraseña actual y con el método protegido comprueba si son iguales, en ese caso muestra el nombre del usuario y la contraseña"""
         
         contra = input("Introduce el valor de la contraseña actual: ")
         if Usuario.modulcomprobarcontrasenya(self,contra)==True:
-            print("\nLas propiedades del objeto",self.name,"son:")
-            print("====================================")
-            print("Nombre de usuario:",self.name)
-            print("Contraseña del usuario:", self.__password)
+            print("\nLas propiedades del objeto",self.name,"son:\n====================================\nNombre de usuario:",self.name,"\nContraseña del usuario:", self.__password)
 
     def cambiarpassword(self):
         """ cambia la contraseña si el método protegido devuelve True """
@@ -22,7 +19,7 @@ class Usuario():
         contra = input("Introduce el valor de la contraseña actual: ")
         if Usuario.modulcomprobarcontrasenya(self,contra)==True:
             self.__password=newpass
-            print("Contrasenya cambiada a",self.__password)
+            print("Contraseña cambiada a",self.__password)
 
     def cambiarnombre(self):
         """ pide la contraseña actual, comprueba que es la que tiene el usuario con el método protegido para permitir o no permitir el cambio de nombre de usuario"""
@@ -48,7 +45,7 @@ class Usuario():
             print("Contraseña válida. Acceso concedido")
             return True
         else:
-            print("Contrasenya Incorrecta")
+            print("Contraseña Incorrecta")
             return False
 
 nom = input("Nombre de usuario: ")
@@ -56,7 +53,7 @@ contrasenya = input("Contraseña: ")
 usu1=Usuario(nom, contrasenya)
 
 while True:
-    print("""\n- Menú de configuración de usuario:\n=================================\n\na. Mostrar el nombre del usuario. \nb. Mostrar el nombre y la contraseña del usuario. \nc. Cambiar el nombre del usuario. \nd. Cambiar la contraseña del usuario. \ne. Ejecutar el módulo de control de contraseña \nf. Salir del programa.\n""")
+    print("""\n- Menú de configuración de usuario:\n=================================\n\na. Mostrar el nombre del usuario. \nb. Mostrar el nombre y la contraseña del usuario. \nc. Cambiar el nombre del usuario. \nd. Cambiar la contraseña del usuario. \ne. Ejecutar el módulo de control de contraseña \nf. Salir del programa.\n\n        presione g para forzar el cambio de usuario a ¨Pedro¨ y de contraseña a ¨adios¨\n""")
 
     i = input("Selecciona opción: ")
     if i.lower() == "a":
@@ -74,10 +71,12 @@ while True:
         print("Adios")
         break
 
-    # elif i.lower() == "g":
-    #     usu1.__password="adios"
-    #     usu1.name="pedro"
-    #     usu1.mostrarUsuario()
+    elif i.lower() == "g":
+        usu1.__password="adios"
+        usu1.name="Pedro"
+        print("Se ha intentado forzar el cambio de usuario a ¨Pedro¨ y de contraseña a ¨adios¨\nCompruebe si se efectuaron los cambios")
+        usu1.mostrarUsuario()
+
 
     else:
         print("Introduzca una opcion válida")
