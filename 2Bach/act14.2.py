@@ -1,4 +1,4 @@
-class animal():
+class Animal():
     def __init__(self,fuerza):
         self.vida=10
         if fuerza<=5:
@@ -6,21 +6,48 @@ class animal():
         else:
             pass
     def propiedades (self):
-        print("Propiedades del animal:")
+        
         print("Vida -->",self.vida)
         print("Fuerza -->",self.fuerza)
 
-class perros(animal):
+class Perros(Animal):
     def __init__(self,fuerza):
-        super.__init__(fuerza)
+        super().__init__(fuerza)
         self.size=3
     def propiedades(self):
+        print("\nPropiedades del perro:")
+        super().propiedades()
         print("Tamaño -->",self.size)
-        return super().propiedades()
 
+class Gatos(Animal):
+    def __init__(self,fuerza):
+        super().__init__(fuerza)
+        self.hambre=2
+    def propiedades(self):
+        print("\nPropiedades del gato:")
+        super().propiedades()
+        print("Hambre -->",self.hambre)
 
+class Ratones(Animal):
+    def __init__(self,fuerza):
+        super().__init__(fuerza)
+        self.color="blanco"
+    def propiedades(self):
+        print("\nPropiedades del ratón:")
+        super().propiedades()
+        print("Color -->",self.color)
 
-fuerza=int(input("Introduce el valor de 'fuerza' del objeto a crear: "))
-perro1=perros(fuerza)
+fp=int(input("\nIntroduce el valor de 'fuerza' del primer objeto a crear: "))
+perro1=Perros(fp)
 
 perro1.propiedades()
+
+fg=int(input("\nIntroduce el valor de 'fuerza' del segundo objeto a crear: "))
+gato1=Gatos(fg)
+
+gato1.propiedades()
+
+fr=int(input("\nIntroduce el valor de 'fuerza' del tercer objeto a crear: "))
+raton1=Ratones(fr)
+
+raton1.propiedades()
