@@ -53,7 +53,7 @@ contrasenya = input("Contraseña: ")
 usu1=Usuario(nom, contrasenya)
 
 while True:
-    print("""\n- Menú de configuración de usuario:\n=================================\n\na. Mostrar el nombre del usuario. \nb. Mostrar el nombre y la contraseña del usuario. \nc. Cambiar el nombre del usuario. \nd. Cambiar la contraseña del usuario. \ne. Ejecutar el módulo de control de contraseña \nf. Salir del programa.\n\n        presione g para forzar el cambio de usuario a ¨Pedro¨ y de contraseña a ¨adios¨\n""")
+    print("""=================================\n- Menú de configuración de usuario:\n=================================\n\na. Mostrar el nombre del usuario. \nb. Mostrar el nombre y la contraseña del usuario. \nc. Cambiar el nombre del usuario. \nd. Cambiar la contraseña del usuario. \ne. Ejecutar el módulo de control de contraseña \nf. Salir del programa.\n\n        presione g para forzar el cambio de usuario a ¨Pedro¨ y de contraseña a ¨adios¨\n""")
 
     i = input("Selecciona opción: ")
     if i.lower() == "a":
